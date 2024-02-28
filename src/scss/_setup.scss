@@ -1,0 +1,53 @@
+// IMPORTS
+
+@use 'sass:math';
+@use 'sass:map';
+
+// VARIABLES
+
+$cardBackground: #f0d6ff;
+$baseTextColor: #626262;
+$purple: #b639ff;
+$dark-purple: #3a035e;
+
+// Negates the need for 62.5% trick
+// Source: https://youtu.be/dHbYcAncAgQ?t=814
+
+$browser-context: 16; // Default
+
+@function rem($pixels, $context: $browser-context) {
+  @return (math.div($pixels, $context)) * 1rem;
+}
+
+// Breakpoints and Media / Container Query
+
+// Go here for an explanation of what's happening here:
+// https://youtu.be/g1kF45K-q7o?t=515
+
+$breakpoints: (
+  small: 40em,
+  medium: 65em,
+  large: 90em,
+);
+
+// Media Queries
+
+@mixin mq($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+// Container Query
+// Requires slightly different syntax (which I think is a bug?) - See here:
+// https://dev.to/kenystev/css-container-queries-with-sass-mixins-6ic
+
+@mixin cq($key) {
+  $size: map.get($breakpoints, $key);
+
+  @container (min-width: #{$size}) {
+    @content;
+  }
+}

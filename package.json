@@ -1,0 +1,27 @@
+{
+  "name": "drinkscollab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compileSass": "sass src/scss/style.scss src/css/style.css --style=expanded --embed-sources",
+    "prefix": "npm run compileSass && postcss src/css/style.css --use=autoprefixer --output=src/css/style.css",
+    "eleventy": "eleventy",
+    "eleventy:dev": "eleventy --serve",
+    "start": "concurrently \"onchange \"src/scss/**/*.scss\" \"src/scss/*.scss\" -- npm run prefix\" \"npm run eleventy:dev\" ",
+    "build": "npm run prefix && npm run eleventy"
+  },
+  "author": "Hugh Collier",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-server-browsersync": "^1.0.2",
+    "autoprefixer": "^10.4.17",
+    "concurrently": "^8.2.2",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.71.1"
+  }
+}
