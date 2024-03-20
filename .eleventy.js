@@ -1,7 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/css/style.css')
   eleventyConfig.addPassthroughCopy('./src/js')
-  eleventyConfig.addPassthroughCopy('./src/imgages')
+  eleventyConfig.addPassthroughCopy('./src/images')
 
   // Using Browser Sync because Eleventy Dev Server does not seem to hot-reload browser until browser window is active in Firefox on macOS when CSS file is changed (Seems fine for other file types 🤷‍♂️)
   eleventyConfig.setServerOptions({
