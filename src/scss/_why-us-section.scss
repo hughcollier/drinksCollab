@@ -1,0 +1,54 @@
+@use '_setup.scss' as a;
+
+#why-us {
+  margin-bottom: 100px;
+
+  h2 {
+    text-align: center;
+    font-size: a.rem(60);
+    margin: 50px;
+
+    @include a.mq(medium) {
+      font-size: a.rem(60);
+    }
+  }
+
+  #icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 5em;
+
+    @include a.mq(medium) {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    .circle-icon {
+      flex-basis: 100%;
+      display: grid;
+      text-align: center;
+      text-transform: uppercase;
+      justify-items: center;
+    }
+
+    h3 {
+      font-size: a.rem(30);
+      word-spacing: 100vw;
+    }
+
+    img {
+      height: 50vw;
+      width: auto;
+      margin: 10vw;
+
+      @include a.mq(medium) {
+        width: 20vw;
+        height: auto;
+        margin: 0;
+      }
+    }
+  }
+}

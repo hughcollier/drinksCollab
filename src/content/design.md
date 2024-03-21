@@ -2,8 +2,7 @@
 title: 2. Design
 icon: /images/designIcon.png
 tags: services
+order: 2
 ---
 
-During this stage you will be working with <a href="https://tidy.studio">Tidy Studio</a>
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vero nulla perspiciatis, reiciendis sequi fugit iusto voluptatibus facere sapiente ducimus est quisquam consequuntur beatae cumque et iste, impedit perferendis nam.
+At <a href="https://tidy.studio">Tidy Studio</a> elevates your drink with powerful design that differentiates and defines. Diving deep into your brand’s ethos, they create packaging and branding that deeply resonate with your audience. The visual identity crafted by Tidy Studio serves as a silent ambassador, capturing consumer attention and fostering loyalty. Partner with Tidy Studio to ensure your beverage not only stands out on the shelves but also builds a lasting connection with consumers.

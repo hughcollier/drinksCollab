@@ -1,3 +1,16 @@
+// Add correct amount of negative margin to three drinks illustration to ensure section overlap
+
+window.onload = function () {
+  const threeDrinksHeight = document.querySelector('.three-drinks').offsetHeight
+  console.log(threeDrinksHeight)
+  let threeDrinksMarginTop = `-${threeDrinksHeight / 2.2}px`
+  console.log(threeDrinksMarginTop)
+  document.querySelector('.three-drinks').style.top = threeDrinksMarginTop
+  document.querySelector('#intro p').style.top = threeDrinksMarginTop
+}
+
+// GASAP animations
+
 gsap.registerPlugin(MotionPathPlugin)
 
 // General utility animation which fades in and up.
@@ -24,19 +37,6 @@ if (elementsToAnimateUpAndIn) {
     i++
   })
 }
-
-// Add correct amount of negative margin to three drinks illustration to ensure section overlap
-
-window.onload = function () {
-  const threeDrinksHeight = document.querySelector('.three-drinks').offsetHeight
-  console.log(threeDrinksHeight)
-  let threeDrinksMarginTop = `-${threeDrinksHeight / 1.5}px`
-  console.log(threeDrinksMarginTop)
-  document.querySelector('.three-drinks').style.top = threeDrinksMarginTop
-  document.querySelector('#intro p').style.top = threeDrinksMarginTop
-}
-
-// GASAP animations
 
 const details = gsap.utils.toArray('.service:not(:first-child)')
 const icons = gsap.utils.toArray('.service-icons>.icon:not(:first-child)')
@@ -80,46 +80,64 @@ gsap.to('.big-drinks', {
     trigger: '#intro',
     start: '10%,  center',
     // end: 'bottom, 75%',
-    markers: true,
+    // markers: true,
     scrub: 1,
   },
   x: 700,
 })
 
-gsap.from('.hero-text-animation', {
-  duration: 1.5,
-  translateX: 50,
-  stagger: 0.25,
-  opacity: 0,
+// Hero Section Timeline
+
+const heroTimeline = gsap.timeline({
   delay: 1,
-  ease: 'expo.out',
 })
 
-gsap.from('.three-drinks', {
+heroTimeline.from('.logo', {
   opacity: 0,
-  y: 50,
+  y: 20,
   duration: 1,
-  delay: 2.5,
 })
 
-gsap.from('#image-section li', {
+heroTimeline.from(
+  '.hero-text-animation',
+  {
+    duration: 1.5,
+    translateX: 50,
+    stagger: 0.25,
+    opacity: 0,
+    ease: 'expo.out',
+  },
+  '>-20%'
+)
+
+heroTimeline.from(
+  '.three-drinks',
+  {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+  },
+  '>-50%'
+)
+
+gsap.from('#form-section li', {
   x: 100,
   duration: 1.5,
   ease: 'expo-out',
 
   scrollTrigger: {
-    trigger: '#image-section',
+    trigger: '#form-section',
     scrub: true,
   },
 })
 
-gsap.from('#image-section li img', {
+gsap.from('#form-section li img', {
   opacity: 0,
   duration: 0.7,
   stagger: 0.5,
 
   scrollTrigger: {
-    trigger: '#image-section',
+    trigger: '#form-section',
   },
 })
 
@@ -143,5 +161,19 @@ letsGoImageAnimation.to('.lets-go-image', {
     align: '.path-for-gsap-motion-path',
     autoRotate: false,
     alignOrigin: [0.5, 0.5],
+  },
+})
+
+gsap.from('.circle-icon', {
+  y: 60,
+  opacity: 0,
+  duration: 2,
+  ease: 'expo.out',
+  stagger: 0.2,
+
+  scrollTrigger: {
+    trigger: '#why-us',
+    // markers: true,
+    start: 'top 60%',
   },
 })

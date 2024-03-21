@@ -1,0 +1,35 @@
+@use '_setup.scss' as a;
+
+#hero {
+  height: 100vh;
+  background-color: a.$light;
+  place-content: center;
+  justify-items: center;
+
+  .logo {
+    width: 25vw;
+    position: relative;
+    margin: 0 auto 50px auto;
+  }
+
+  h1 {
+    color: a.$light;
+    -webkit-text-stroke: 4px #26144d;
+    font-size: clamp(a.rem(80), 7vw, a.rem(120));
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      display: inline-block;
+    }
+
+    .solid-white {
+      -webkit-text-stroke: 0px;
+      color: white;
+    }
+    .solid-black {
+      -webkit-text-stroke: 0px;
+      color: #26144d;
+    }
+  }
+}

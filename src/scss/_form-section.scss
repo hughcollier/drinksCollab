@@ -1,0 +1,107 @@
+@use '_setup.scss' as a;
+
+#form-section {
+  background-color: a.$light;
+  margin-top: 250px;
+  position: relative;
+
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 2em;
+    transform: scale(1.1);
+  }
+
+  li {
+    position: relative;
+
+    img {
+      box-shadow: #26144d -7px 7px 0px -2px;
+    }
+  }
+
+  li:nth-child(odd) {
+    top: -4em;
+  }
+
+  li:nth-child(even) {
+    top: 4em;
+  }
+
+  h2 {
+    text-align: center;
+    // text-transform: uppercase;
+    margin-top: 8em;
+    font-size: a.rem(40);
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  form {
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 100%;
+    max-width: 500px;
+    p {
+      text-align: left;
+      width: 100%;
+    }
+
+    .form-field-label {
+      display: none;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      background-color: color-mix(in oklab, a.$light 80%, a.$dark);
+      border: none;
+      padding: 10px;
+      color: white;
+      border: 2px solid color-mix(in oklab, a.$light 80%, a.$dark);
+      border-radius: 10px;
+      // font-weight: bold;
+
+      &:focus {
+        outline: none;
+        border: solid 2px a.$dark;
+      }
+
+      &::placeholder {
+        opacity: 0.8;
+      }
+    }
+
+    button {
+      background-color: a.$dark;
+      color: white;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 10px;
+    }
+  }
+
+  .lets-go-image-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    padding: 100px 0;
+
+    .lets-go-image {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      width: 80vw;
+      max-width: 900px;
+    }
+
+    #motion-path {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      width: 5vw;
+    }
+  }
+}

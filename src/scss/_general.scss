@@ -57,34 +57,6 @@ p {
   background-color: a.$light;
 }
 
-#hero {
-  height: 100vh;
-  background-color: a.$light;
-  place-content: center;
-  justify-items: center;
-
-  h1 {
-    color: a.$light;
-    -webkit-text-stroke: 4px #26144d;
-    font-size: clamp(a.rem(80), 8vw, a.rem(120));
-    text-align: center;
-    text-transform: uppercase;
-
-    span {
-      display: inline-block;
-    }
-
-    .solid-white {
-      -webkit-text-stroke: 0px;
-      color: white;
-    }
-    .solid-black {
-      -webkit-text-stroke: 0px;
-      color: #26144d;
-    }
-  }
-}
-
 #intro {
   .three-drinks {
     width: 70%;
@@ -98,183 +70,27 @@ p {
   }
 }
 
-#cta {
-  height: 50vh;
+#partner-logos {
+  margin-top: 150px;
+  margin-bottom: 100px;
+  img {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+#footer {
   background-color: a.$light;
-}
+  padding-bottom: 150px;
 
-#why-work-with-us {
-  text-align: center;
-  padding: 2em;
-  margin-top: 200px;
-}
-
-#services {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  h2 {
-    font-size: a.rem(45);
-    text-transform: uppercase;
-  }
-
-  p {
-    font-size: a.rem(20);
-    margin-bottom: 1em;
-  }
-
-  a {
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-thickness: 0.2em;
-    text-decoration-color: a.$light;
-    text-underline-offset: 0.2em;
-    transition: all ease 0.25s;
-    font-weight: 400;
-  }
-
-  a:hover {
-    font-weight: 700;
-    // text-decoration-thickness: 0.4em;
-  }
-}
-
-#left {
-  div {
-    min-height: 100vh;
-    display: grid;
-    place-content: center;
-    justify-items: center;
-
-    & > * {
-      width: 70%;
-    }
-
-    p {
-      text-align: left;
-    }
-  }
-}
-
-#right {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  align-items: center;
-  justify-items: center;
-
-  .service-icons {
-    position: relative;
-    width: 80%;
-    aspect-ratio: 1;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    overflow: hidden;
-
-    .icon {
-      position: absolute;
-    }
-  }
-}
-
-#image-section {
-  // min-height: 100vh;
-  background-color: a.$light;
-  // padding-bottom: 250px;
-  margin-top: 250px;
-
-  ul {
-    list-style: none;
+  .footer-items {
     display: flex;
-    padding: 0;
-    gap: 2em;
-    transform: scale(1.1);
-  }
-
-  li {
-    position: relative;
+    padding: 50px;
+    justify-content: space-between;
+    align-items: center;
 
     img {
-      box-shadow: #26144d -7px 7px 0px -2px;
-    }
-  }
-
-  li:nth-child(odd) {
-    top: -4em;
-  }
-
-  li:nth-child(even) {
-    top: 4em;
-  }
-
-  h2 {
-    text-align: center;
-    // text-transform: uppercase;
-    margin-top: 8em;
-    font-size: a.rem(40);
-  }
-
-  p {
-    margin-bottom: 1em;
-  }
-
-  form {
-    margin: 0 auto;
-    padding-top: 100px;
-    width: 100%;
-    max-width: 500px;
-    p {
-      text-align: left;
-      width: 100%;
-    }
-
-    .form-field-label {
-      display: none;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      background-color: color-mix(in oklab, a.$light 80%, a.$dark);
-      border: none;
-      padding: 10px;
-      color: white;
-      border: 2px solid color-mix(in oklab, a.$light 80%, a.$dark);
-      border-radius: 10px;
-      // font-weight: bold;
-
-      &:focus {
-        outline: none;
-        border: solid 2px a.$dark;
-      }
-
-      &::placeholder {
-        opacity: 0.8;
-      }
-    }
-  }
-
-  .lets-go-image {
-    width: 110vw;
-    max-width: 110vw;
-    margin: 0 auto;
-  }
-
-  #motion-path {
-    width: 5vw;
-    margin: 40vw auto 0 auto;
-  }
-
-  @include a.mq(medium) {
-    .lets-go-image {
-      width: 75vw;
-      margin: 0 auto;
-    }
-
-    #motion-path {
-      width: 5vw;
+      width: 20vw;
     }
   }
 }

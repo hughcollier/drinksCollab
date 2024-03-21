@@ -1,6 +1,6 @@
 <section id="services" class="">
   <div id="left">
-    {% for service in collections.services %}
+    {% for service in collections.services | reverse %}
     <div class="service" id="">
       <h2>{{service.data.title}}</h2>
       {{ service.templateContent | safe }}
