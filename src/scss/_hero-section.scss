@@ -7,6 +7,11 @@
   justify-items: center;
   place-content: center;
 
+  div {
+    position: relative;
+    top: -15vh;
+  }
+
   @include a.mq(medium) {
     place-content: center;
   }
