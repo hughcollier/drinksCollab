@@ -9,7 +9,7 @@
   </div>
   <div id="right">
     <div class="service-icons">
-      {% for service in collections.services %}
+      {% for service in collections.services | reverse %}
       <img class="icon" src="{{service.data.icon}}" alt="" />
       {% endfor -%}
     </div>

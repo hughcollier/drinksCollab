@@ -3,19 +3,35 @@
 #hero {
   height: 100vh;
   background-color: a.$light;
-  place-content: center;
+  // place-content: flex-start;
   justify-items: center;
+  place-content: center;
+
+  @include a.mq(medium) {
+    place-content: center;
+  }
 
   .logo {
-    width: 25vw;
+    width: 75vw;
     position: relative;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 100px auto;
+
+    @include a.mq(medium) {
+      width: 25vw;
+      position: relative;
+      margin: 10vh auto 25px auto;
+    }
   }
 
   h1 {
     color: a.$light;
     -webkit-text-stroke: 4px #26144d;
     font-size: clamp(a.rem(80), 7vw, a.rem(120));
+
+    @include a.mq(small) {
+      font-size: clamp(a.rem(80), 7vw, a.rem(120));
+    }
+
     text-align: center;
     text-transform: uppercase;
 

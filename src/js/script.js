@@ -3,7 +3,7 @@
 window.onload = function () {
   const threeDrinksHeight = document.querySelector('.three-drinks').offsetHeight
   console.log(threeDrinksHeight)
-  let threeDrinksMarginTop = `-${threeDrinksHeight / 2.2}px`
+  let threeDrinksMarginTop = `-${threeDrinksHeight / 2.5}px`
   console.log(threeDrinksMarginTop)
   document.querySelector('.three-drinks').style.top = threeDrinksMarginTop
   document.querySelector('#intro p').style.top = threeDrinksMarginTop
@@ -73,6 +73,7 @@ ScrollTrigger.create({
 
 gsap.set('.big-drinks', {
   x: -900,
+  y: 100,
 })
 
 gsap.to('.big-drinks', {
@@ -133,7 +134,7 @@ gsap.from('#form-section li', {
 
 gsap.from('#form-section li img', {
   opacity: 0,
-  duration: 0.7,
+  duration: 0.8,
   stagger: 0.5,
 
   scrollTrigger: {
@@ -146,11 +147,6 @@ const letsGoImageAnimation = gsap.timeline({
     trigger: '.lets-go-image',
   },
 })
-
-// letsGoImageAnimation.from('.lets-go-image', {
-//   opacity: 0,
-//   duration: 5,
-// })
 
 letsGoImageAnimation.to('.lets-go-image', {
   repeat: -1,

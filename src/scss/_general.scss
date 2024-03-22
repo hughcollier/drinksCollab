@@ -38,7 +38,7 @@ h5 {
 }
 
 p {
-  width: 95%;
+  width: 85%;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -65,8 +65,45 @@ p {
   }
 
   p {
-    font-size: a.rem(30);
-    margin: 5em auto;
+    font-size: a.rem(50);
+    margin: 5em auto 0 auto;
+
+    @include a.mq(medium) {
+      font-size: a.rem(30);
+    }
+  }
+
+  .big-drinks {
+    width: 180%;
+    max-width: 180%;
+    height: auto;
+
+    @include a.mq(medium) {
+      width: 100%;
+    }
+  }
+}
+
+#sub-intro {
+  background-color: a.$light;
+  color: a.$dark;
+  padding: 200px 0 100px 0;
+
+  h2 {
+    text-align: center;
+    font-size: a.rem(100);
+
+    @include a.mq(medium) {
+      font-size: a.rem(60);
+    }
+  }
+
+  p {
+    font-size: a.rem(40);
+
+    @include a.mq(medium) {
+      font-size: a.rem(24);
+    }
   }
 }
 
