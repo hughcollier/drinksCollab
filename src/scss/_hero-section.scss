@@ -31,9 +31,9 @@
   h1 {
     color: a.$light;
     -webkit-text-stroke: 4px #26144d;
-    font-size: clamp(a.rem(80), 7vw, a.rem(120));
+    font-size: a.rem(110);
 
-    @include a.mq(small) {
+    @include a.mq(medium) {
       font-size: clamp(a.rem(80), 7vw, a.rem(120));
     }
 

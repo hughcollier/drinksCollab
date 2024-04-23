@@ -1,4 +1,4 @@
-<section id="services" class="">
+<section id="services" class="desktop-only-view">
   <div id="left">
     {% for service in collections.services | reverse %}
     <div class="service" id="">
@@ -13,5 +13,14 @@
       <img class="icon" src="{{service.data.icon}}" alt="" />
       {% endfor -%}
     </div>
+  </div>
+</section>
+
+<section id="services-mobile" class="mobile-only-view">
+  {% for service in collections.services | reverse %}
+  <img class="icon animate-in-up" src="{{service.data.icon}}" alt="" />
+  <div class="animate-in-up">
+    <h2>{{service.data.title}}</h2>
+    {{ service.templateContent | safe }} {% endfor -%}
   </div>
 </section>

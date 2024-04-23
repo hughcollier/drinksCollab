@@ -107,6 +107,17 @@ p {
   }
 }
 
+body:has(#thanks) {
+  background-color: a.$light;
+}
+
+#thanks {
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+  place-content: center;
+}
+
 #partner-logos {
   margin-top: 150px;
   margin-bottom: 100px;

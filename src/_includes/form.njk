@@ -1,32 +1,78 @@
 <form name="contact" method="POST" data-netlify="true">
-  <p class="animate-in-up">
-    <label
-      ><span class="form-field-label"> Your Name:</span>
-      <input type="text" name="name" placeholder="Your Name:"
-    /></label>
-  </p>
+  <div>
+    <h3>Basic Information</h3>
+    <p class="animate-in-up">
+      <label
+        ><span class="form-field-label"> Your Name:</span>
+        <input required type="text" name="name" placeholder="Your Name:"
+      /></label>
+    </p>
 
-  <p class="animate-in-up">
-    <label
-      ><span class="form-field-label"> Your Email:</span>
-      <input type="email" name="email" placeholder="Your Email:"
-    /></label>
-  </p>
+    <p class="animate-in-up">
+      <label
+        ><span class="form-field-label"> Your Email:</span>
+        <input required type="email" name="email" placeholder="Your Email:"
+      /></label>
+    </p>
 
-  <p class="animate-in-up">
-    <label
-      ><span class="form-field-label"> Your Phone Number:</span>
-      <input type="email" name="email" placeholder="Your Phone Number:"
-    /></label>
-  </p>
+    <p class="animate-in-up">
+      <label
+        ><span class="form-field-label"> Your Phone Number:</span>
+        <input
+          required
+          type="text"
+          name="email"
+          placeholder="Your Phone Number:"
+      /></label>
+    </p>
 
-  <p class="animate-in-up">
-    <label
-      ><span class="form-field-label"> Message:</span>
-      <textarea name="message" placeholder="Message:"></textarea>
-    </label>
-  </p>
-  <p class="animate-in-up">
-    <button type="submit">Send</button>
-  </p>
+    <h3 class="animate-in-up">How Can We Help?</h3>
+    <div class="animate-in-up">
+      <input type="checkbox" id="recipe-dev" />
+      <label for="recipe-dev">Recipe Development</label>
+    </div>
+
+    <div class="animate-in-up">
+      <input type="checkbox" id="design" />
+      <label for="design">Design & Branding</label>
+    </div>
+
+    <div class="animate-in-up">
+      <input type="checkbox" id="bottling" />
+      <label for="bottling">Bottling / Canning</label>
+    </div>
+  </div>
+
+  <div class="animate-in-up">
+    <h3>About Your Project</h3>
+    <p class="animate-in-up">
+      <label
+        ><span class="form-field-label"> Message:</span>
+        <textarea name="message" placeholder="Message:"></textarea>
+      </label>
+    </p>
+    <h3>What stage are you currently at?</h3>
+
+    <div class="animate-in-up">
+      <input type="radio" id="startup" name="current-position" />
+      <label for="startup">Startup</label>
+    </div>
+    <div class="animate-in-up">
+      <input type="radio" id="trading" name="current-position" />
+      <label for="trading">Already Trading</label>
+    </div>
+
+    <p class="animate-in-up">
+      <button type="submit">Send</button>
+    </p>
+
+    <div class="animate-in-up">
+      <input required type="checkbox" id="privacy" />
+      <label for="privacy"
+        >I confirm that my details can be passed on to Foodbuzz, Tidy Studio and
+        Devon Drinks Solutions and agree to being contacted in relation to this
+        enquiry as per the Privacy Policy</label
+      >
+    </div>
+  </div>
 </form>

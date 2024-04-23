@@ -44,7 +44,11 @@
     margin: 0 auto;
     padding-top: 100px;
     width: 100%;
-    max-width: 500px;
+    max-width: 90%;
+
+    @include a.mq(medium) {
+      max-width: 500px;
+    }
     p {
       text-align: left;
       width: 100%;
@@ -54,7 +58,8 @@
       display: none;
     }
 
-    input,
+    input[type='text'],
+    input[type='email'],
     textarea {
       width: 100%;
       background-color: color-mix(in oklab, a.$light 80%, a.$dark);
