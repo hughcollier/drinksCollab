@@ -1,48 +1,45 @@
 @use '_setup.scss' as a;
 
 #form-section {
-
   background-color: a.$light;
   margin-top: 250px;
   position: relative;
 
-#form-grid-container {
-  display: grid;
-  gap: a.rem(30);
+  #form-grid-container {
+    display: grid;
+    gap: a.rem(30);
 
-  label.privacy-box-text {
-    font-size: a.rem(30)
-
-  }
-  
-  @include a.mq(medium) {
-    grid-template-columns: 1fr 1fr;
-
-    .left{
-      grid-column: 1/2;
+    label.privacy-box-text {
+      font-size: a.rem(30);
     }
 
-    .right {
-      grid-column: 2/3
-    }
+    @include a.mq(medium) {
+      grid-template-columns: 1fr 1fr;
 
-    .span-full {
-      grid-row: 2/3;
-      grid-column: 1/3;
-      // display: flex;
-
-      p {
-        width: auto;
+      .left {
+        grid-column: 1/2;
       }
 
-      label.privacy-box-text {
-        font-size: a.rem(12)
+      .right {
+        grid-column: 2/3;
+      }
 
+      .span-full {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        // display: flex;
+
+        p {
+          width: auto;
+        }
+
+        label.privacy-box-text {
+          font-size: a.rem(12);
+        }
       }
     }
   }
-}
-  
+
   ul {
     list-style: none;
     display: flex;
@@ -87,7 +84,6 @@
 
   p {
     margin-bottom: 1em;
-   
   }
 
   form {
@@ -116,14 +112,13 @@
       @include a.mq(medium) {
         margin-bottom: 5px;
       }
-
     }
 
-    input[type="radio"],
-    input[type="checkbox"] {
+    input[type='radio'],
+    input[type='checkbox'] {
       width: 60px;
       height: 60px;
-      margin-right: 20px;;
+      margin-right: 20px;
     }
 
     label.check-radio-box {
@@ -135,13 +130,12 @@
         font-size: a.rem(16);
       }
 
-      input[type="radio"],
-      input[type="checkbox"] {
+      input[type='radio'],
+      input[type='checkbox'] {
         width: 20px;
         height: 20px;
-        margin-right: 10px;;
+        margin-right: 10px;
       }
-
     }
 
     input[type='text'],
@@ -174,6 +168,7 @@
       padding: 5px 30px;
       border-radius: 50px;
       font-size: a.rem(60);
+      cursor: pointer;
       @include a.mq(medium) {
         font-size: a.rem(25);
       }
