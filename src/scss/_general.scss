@@ -41,13 +41,15 @@ p {
   width: 85%;
   margin: 0 auto;
   text-align: center;
-  position: relative;
-  font-size: a.rem(20);
+  position: relative;  
+  font-size: a.rem(40);
 }
 
 @include a.mq(medium) {
   p {
     width: 60%;
+    font-size: a.rem(20);
+
   }
 }
 

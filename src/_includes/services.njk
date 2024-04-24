@@ -1,8 +1,8 @@
 <section id="services" class="desktop-only-view">
   <div id="left">
     {% for service in collections.services | reverse %}
-    <div class="service" id="">
-      <h2>{{service.data.title}}</h2>
+      <div class="service" id="">
+      <h2>{{service.data.title}}</h2> 
       {{ service.templateContent | safe }}
     </div>
     {% endfor -%}

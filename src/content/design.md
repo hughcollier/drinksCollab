@@ -1,5 +1,5 @@
 ---
-title: 2. Design
+title: Design
 icon: /images/designIcon.png
 tags: services
 order: 2

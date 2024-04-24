@@ -1,5 +1,5 @@
 ---
-title: 1. Develop
+title: Develop
 icon: /images/developIcon.png
 tags: services
 order: 1
