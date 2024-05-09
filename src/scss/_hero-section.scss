@@ -10,6 +10,7 @@
   div {
     position: relative;
     top: -15vh;
+    pointer-events: none;
   }
 
   @include a.mq(medium) {
@@ -24,7 +25,7 @@
     @include a.mq(medium) {
       width: 25vw;
       position: relative;
-      margin: 10vh auto 25px auto;
+      margin: 10vh auto 50px auto;
     }
   }
 

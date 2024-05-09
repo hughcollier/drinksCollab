@@ -191,6 +191,12 @@ body:has(#thanks) {
 // Cookie Preference Centre
 
 #termsfeed-com---preferences-center {
+  .cc-pc-head-close {
+    &:focus {
+      border: 2px solid color-mix(in oklab, #b57aff 30%, white);
+    }
+  }
+
   p {
     width: 100%;
     text-align: left;
