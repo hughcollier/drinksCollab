@@ -41,7 +41,7 @@ p {
   width: 85%;
   margin: 0 auto;
   text-align: center;
-  position: relative;  
+  position: relative;
   font-size: a.rem(40);
 }
 
@@ -49,7 +49,6 @@ p {
   p {
     width: 60%;
     font-size: a.rem(20);
-
   }
 }
 
@@ -141,6 +140,110 @@ body:has(#thanks) {
 
     img {
       width: 20vw;
+    }
+  }
+}
+
+// Cookie Consent Banner
+
+#termsfeed-com---nb {
+  background-color: a.$dark;
+  max-width: 100%;
+
+  p {
+    margin: 0 auto;
+  }
+
+  .cc-nb-buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 1em;
+
+    .cc-nb-okagree,
+    .cc-nb-reject {
+      background-color: a.$light;
+
+      &:focus {
+        box-shadow: 0 0 0 2px color-mix(in oklab, #b57aff 30%, white);
+      }
+    }
+
+    & > * {
+      border-radius: 30px;
+    }
+
+    .cc-nb-changep {
+      &:focus {
+        box-shadow: 0 0 0 2px color-mix(in oklab, #b57aff 90%, white);
+      }
+    }
+  }
+}
+
+// Update Cookie Preferences Button
+
+#open_preferences_center {
+  position: absolute;
+  padding: 5px;
+}
+
+// Cookie Preference Centre
+
+#termsfeed-com---preferences-center {
+  p {
+    width: 100%;
+    text-align: left;
+  }
+
+  .cc-pc-head-title-text,
+  .cc-pc-head-title-headline {
+    color: a.$light;
+  }
+
+  .cc-pc-head,
+  .cc-cp-body-content,
+  .cc-cp-foot {
+    background: a.$dark !important;
+  }
+
+  .cc-cp-foot-save {
+    background-color: a.$light;
+    color: white;
+    border-radius: 30px;
+  }
+
+  .cc-cp-foot-save:focus {
+    box-shadow: 0 0 0 2px color-mix(in oklab, #b57aff 30%, white);
+  }
+
+  .cc-cp-body-tabs-item-link {
+    color: white !important;
+  }
+
+  .cc-cp-body-tabs {
+    background: a.$dark;
+  }
+
+  .termsfeed-com---pc-dialog .cc-cp-body-tabs-item {
+    background-color: color-mix(in oklab, a.$dark 80%, black);
+    border-right-color: a.$dark;
+    border-bottom-color: a.$dark;
+  }
+
+  .termsfeed-com---pc-dialog .cc-cp-body-tabs-item[active='true'] {
+    background-color: a.$dark !important;
+  }
+
+  .cc-cp-foot-byline {
+    a {
+      color: a.$light;
+      text-decoration: underline;
+    }
+
+    a:focus {
+      box-shadow: 0 0 0 0px;
+      color: color-mix(in oklab, #b57aff 50%, white);
     }
   }
 }
